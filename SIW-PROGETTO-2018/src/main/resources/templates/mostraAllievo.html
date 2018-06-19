@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dati dell'allievo</title>
+</head>
+<body>
+	<h1>Allievo</h1>
+	<div>
+		Cognome: <span th:text="${allievo.cognome}"></span>
+	</div>
+	<div>
+		Nome: <span th:text="${allievo.nome}"></span>
+	</div>
+	<div>
+		Email: <span th:text="${allievo.email}"></span>
+	</div>
+	<div>
+		Telefono: <span th:text="${allievo.telefono}"></span>
+	</div>
+	<div>
+		Data di nascita: <span th:text="${allievo.dataDiNascita}"></span>
+	</div>
+	<div>
+		Luogo di nascita: <span th:text="${allievo.luogoDiNascita}"></span>
+	</div>
+</body>
+</html>
