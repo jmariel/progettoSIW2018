@@ -36,7 +36,7 @@ public class Allievo {
 	@Temporal(TemporalType.DATE)
 	private Date dataDiNascita;
 	
-	@ManyToMany(mappedBy="attività", fetch = FetchType.EAGER)
+	@ManyToMany(mappedBy="listaAllievi", fetch = FetchType.EAGER)
 	private List<Attività> listaAttivitàAllievo;
 	
 	public Allievo() {
