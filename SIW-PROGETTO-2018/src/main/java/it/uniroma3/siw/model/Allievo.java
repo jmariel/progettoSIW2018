@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -35,7 +36,7 @@ public class Allievo {
 	@Temporal(TemporalType.DATE)
 	private Date dataDiNascita;
 	
-	@ManyToMany
+	@ManyToMany(mappedBy="attività", fetch = FetchType.EAGER)
 	private List<Attività> listaAttivitàAllievo;
 	
 	public Allievo() {
