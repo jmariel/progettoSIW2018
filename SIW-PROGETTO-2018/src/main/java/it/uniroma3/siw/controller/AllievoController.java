@@ -24,6 +24,12 @@ public class AllievoController {
 	@Autowired
 	private AllievoValidator valid;
 
+	@RequestMapping("/allievi")
+	public String allievi(Model model) {
+		model.addAttribute("allievi", this.service.findAll());
+		return "allievoList";
+	}
+	
 	@RequestMapping("/addAllievo")
 	public String addAllievo(Model model) {
 		model.addAttribute("allievo", new Allievo());
@@ -46,7 +52,7 @@ public class AllievoController {
 				if(bindingResult.hasErrors()){
 					this.service.save(allievo);
 					model.addAttribute("allievo", this.service.findAll());
-					return "mostraAllievo";
+					return "allievoList";
 				}
 			}
 			return "allievoForm";

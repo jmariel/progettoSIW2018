@@ -1,6 +1,5 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
-<html xmlns:th="http://www.thymeleaf.org"
-	xmlns="http://www.w3.org/1999/html">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
 <meta charset="UTF-8">
 </head>
@@ -35,14 +34,14 @@
 			<tr>
 			<tr>
 				<td>Luogo di Nascita:</td>
-				<td><input type="text" th:field="*{luogo}" /></td>
-				<td th:if="${#fields.hasErrors('luogo')}" th:errors="*{luogo}"></td>
+				<td><input type="text" th:field="*{luogoDiNascita}" /></td>
+				<td th:if="${#fields.hasErrors('luogoDiNascita')}" th:errors="*{luogoDiNascita}"></td>
 			</tr>
 			<tr>
 			<tr>
 				<td>Data di Nascita:</td>
-				<td><input type="text" th:field="*{dataNascita}" /></td>
-				<td th:if="${#fields.hasErrors('dataNascita')}" th:errors="*{dataNascita}"></td>
+				<td><input type="text" th:field="*{dataDiNascita}" /></td>
+				<td th:if="${#fields.hasErrors('dataDiNascita')}" th:errors="*{dataDiNascita}"></td>
 			</tr>
 			<tr>
 				<td><button type="submit">Invia</button></td>
