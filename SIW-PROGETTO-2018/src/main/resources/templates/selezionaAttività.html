@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Seleziona Attività</title>
+</head>
+<body>
+	L'allievo selezionato è:<br>
+	<b>${allievoSelezionato.cognome} ${allievoSelezionato.nome}</b>
+	Seleziona l'attività a cui iscrivere l'allievo: <br>
+	<c:if test="${listaAttività.size() == 0 }">
+		Non ci sono più posti disponibili per oggi.
+	</c:if>
+	<br>
+	<c:forEach var="att" items="${listaAttività}">
+		<a href="iscrivi/${att.id}">${att.id}</a>
+		${att.dataEora}
+	</c:forEach>
+</body>
+</html>
