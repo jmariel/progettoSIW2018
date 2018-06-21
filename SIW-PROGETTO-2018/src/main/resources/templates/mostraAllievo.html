@@ -4,29 +4,40 @@
 <head>
 <meta charset="UTF-8">
 <title>Dati dell'allievo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body>
-	<h1>Allievo</h1>
-	<div>
-		Cognome: <span th:text="${allievo.cognome}"></span>
+<body class="is-preload">
+<div class="container">
+	<div id="main"> 
+		<section id="one">
+   		 <div class="starter-template">
+   		 <p align="center">
+			<h1>Allievo</h1>
+			<div>
+				Cognome: <span th:text="${allievo.cognome}"></span>
+			</div>
+			<div>
+				Nome: <span th:text="${allievo.nome}"></span>
+			</div>
+			<div>
+				Email: <span th:text="${allievo.email}"></span>
+			</div>
+			<div>
+				Telefono: <span th:text="${allievo.telefono}"></span>
+			</div>
+			<div>
+				Data di nascita: <span th:text="${allievo.dataDiNascita}"></span>
+			</div>
+			<div>
+				Luogo di nascita: <span th:text="${allievo.luogoDiNascita}"></span>
+			</div>
+			<br><div>
+			Iscrivi allievo ad un'attività cliccando <a href="associaAllievo">qui</a>
+			</div>
+		</div>
+		</section>
 	</div>
-	<div>
-		Nome: <span th:text="${allievo.nome}"></span>
-	</div>
-	<div>
-		Email: <span th:text="${allievo.email}"></span>
-	</div>
-	<div>
-		Telefono: <span th:text="${allievo.telefono}"></span>
-	</div>
-	<div>
-		Data di nascita: <span th:text="${allievo.dataDiNascita}"></span>
-	</div>
-	<div>
-		Luogo di nascita: <span th:text="${allievo.luogoDiNascita}"></span>
-	</div>
-	<br><div>
-	Iscrivi allievo ad un'attività cliccando <a href="associaAllievo">qui</a>
-	</div>
+</div>
 </body>
 </html>

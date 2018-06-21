@@ -4,20 +4,32 @@
 <head>
 <meta charset="UTF-8">
 <title>Dati del centro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body>
-	<h1>Centro</h1>
-	<div>
-		Nome: <span th:text="${centro.nome}"></span>
+<body class="is-preload">
+<div class="container">
+	<div id="main"> 
+		<section id="one">
+   		 <div class="starter-template">
+		<p align="center">
+			<h1>Centro</h1>
+			<div>
+				Nome: <span th:text="${centro.nome}"></span>
+			</div>
+			<div>
+				Email: <span th:text="${centro.email}"></span>
+			</div>
+			<div>
+				Telefono: <span th:text="${centro.telefono}"></span>
+			</div>
+			<div>
+				Capienza massima: <span th:text="${centro.numMaxAllievi}"></span>
+			</div>
+		</p>
+		</div>
+		</section>
 	</div>
-	<div>
-		Email: <span th:text="${centro.email}"></span>
-	</div>
-	<div>
-		Telefono: <span th:text="${centro.telefono}"></span>
-	</div>
-	<div>
-		Capienza massima: <span th:text="${centro.numMaxAllievi}"></span>
-	</div>
+</div>
 </body>
 </html>

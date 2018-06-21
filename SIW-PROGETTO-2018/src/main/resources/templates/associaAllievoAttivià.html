@@ -3,17 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title>Iscrizione di un allievo a un'attività</title>
+ <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body>
-	<h1>Iscrizione a un'attività</h1>
-	Nuovo allievo? clicca <a href="allievoForm"> qui</a> per registrarlo.
-	Cerca Allievo se già registrato:
-	<form action="searchAllievo" method="get">
-		Nome: <input type="text" name="nome" />
-		Cognome: <input type="text" name="cognome" />
-		Data di nascita: <input type="text" name="dataDiNascita" />
-		Luogo di nascita: <input type="text" name="luogoDiNascita" />
-		<input type="submit" class="submit" value="Cerca" />
-	</form>
+<body class="is-preload">
+<div class="container">
+	<div id="main"> 
+   		 <div class="starter-template">
+			<h1>Iscrizione a un'attività</h1>
+			Nuovo allievo? clicca <a href="allievoForm"> qui</a> per registrarlo.
+			<br><br>
+			Cerca Allievo se già registrato:
+			<form action="searchAllievo" method="get">
+				Nome: <input type="text" name="nome" /><br>
+				Cognome: <input type="text" name="cognome" /><br>
+				Data di nascita: <input type="text" name="dataDiNascita" /><br>
+				Luogo di nascita: <input type="text" name="luogoDiNascita" /><br>
+		<p align="center"><input type="submit" class="submit" value="Cerca" /></p>
+			</form>
+		</div>
+	</div>
+</div>
 </body>
 </html>

@@ -1,45 +1,31 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    
+    <title>Benvenuto!</title>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body>
-
-
-
+<body class="is-preload">
 <div class="container">
-
-    <div class="starter-template">
-        <h1>Admin page</h1>
-
-        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-        <form th:action="@{/logout}" method="post">
-        
-        			<h2><strong>scegli una delle seguenti operazioni:</strong></h2><br />
-			<p align="right">
-				<a th:href="@{/addAllievo}"> Inserisci nuovo allievo </a><br>
-				<a th:href="@{/searchAllievo}"> Cerca allievo </a><br>
-				<a th:href="@{/addAttivit‡}"> Inserisci nuova attivit‡ </a><br>
-				<a th:href="@{/places}"> Elenco Centri di Formazione </a><br>
-				<a th:href="@{/activities}"> Elenco Attivit‡</a><br>
-			</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-            <input type="submit" value="Sign Out"/>
-        </form>
-
-    </div>
-
+	<div id="header"> 
+		<section id="one">
+		<p align="center">
+   		 <div class="starter-template">
+	        <h1 th:inline="text">Benvenuto [[${#httpServletRequest.remoteUser}]]!</h1>
+	        <form th:action="@{/logout}" method="post">
+		        <h2><strong>scegli una delle seguenti operazioni:</strong></h2><br />
+					<a th:href="@{/addAllievo}"> Inserisci nuovo allievo </a><br>
+					<a th:href="@{/searchAllievo}"> Cerca allievo </a><br>
+					<a th:href="@{/addAttivit√†}"> Inserisci nuova attivit√† </a><br>
+					<a th:href="@{/places}"> Elenco Centri di Formazione </a><br>
+					<a th:href="@{/activities}"> Elenco Attivit√†</a><br><br><br>
+		 		<input type="submit" value="Sign Out"/>
+       		 </form>
+   		 </div>
+   		</p>
+   		</section>
+	</div>
 </div>
-<!-- /.container -->
-
 </body>
 </html>

@@ -3,15 +3,27 @@
 	xmlns="http://www.w3.org/1999/html">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 <title>Attività odierna</title>
 </head>
-<body>
-	<h1>Attività</h1>
-	<div>
-		Nome: <span th:text="${attività.nome}"></span>
+<body class="is-preload">
+<div class="container">
+	<div id="main"> 
+		<section id="one">
+   		 <div class="starter-template">
+   		 <p align="center">
+			<h1>Attività</h1>
+			<div>
+				Nome: <span th:text="${attività.nome}"></span>
+			</div>
+			<div>
+				Data e Ora: <span th:text="${attività.dataEora}"></span>
+			</div>
+		</p>
+		</div>
+		</section>
 	</div>
-	<div>
-		Data e Ora: <span th:text="${attività.dataEora}"></span>
-	</div>
+</div>
 </body>
 </html>

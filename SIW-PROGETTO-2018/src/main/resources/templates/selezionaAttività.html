@@ -3,18 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title>Seleziona Attività</title>
+<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body>
-	L'allievo selezionato è:<br>
-	<b>${allievoSelezionato.cognome} ${allievoSelezionato.nome}</b>
-	Seleziona l'attività a cui iscrivere l'allievo: <br>
-	<c:if test="${listaAttività.size() == 0 }">
-		Non ci sono più posti disponibili per oggi.
-	</c:if>
-	<br>
-	<c:forEach var="att" items="${listaAttività}">
-		<a href="iscrivi/${att.id}">${att.id}</a>
-		${att.dataEora}
-	</c:forEach>
+<body class="is-preload">
+	<div id="main"> 
+		<section id="one">
+			<div class="starter-template">
+				L'allievo selezionato è:<br>
+				<b>${allievoSelezionato.cognome} ${allievoSelezionato.nome}</b><br>
+				Seleziona l'attività a cui iscrivere l'allievo: <br>
+				<c:if test="${listaAttività.size() == 0 }">
+					Non ci sono più posti disponibili per oggi.
+				</c:if>
+				<br>
+				<c:forEach var="att" items="${listaAttività}">
+					<a href="iscrivi/${att.id}">${att.id}</a>
+					${att.dataEora}
+				</c:forEach>
+			</div>
+		</section>
+	</div>
 </body>
 </html>

@@ -2,30 +2,41 @@
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns="http://www.w3.org/1999/html">
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 <title>Attività</title>
 </head>
-<body>
-	<div>
-		<h4 class="title">Inserisci Attività</h4>
-		<p th:text="${exists}"></p>
+<body class="is-preload">
+<div class="container">
+	<div id="header"> 
+		<section id="one">
+		<p align="center">
+   		 <div class="starter-template">
+			<div>
+				<h4 class="title">Inserisci Attività</h4>
+				<p th:text="${exists}"></p>
+			</div>
+			<form th:action="@{/attività}" method="POST" th:object="${attività}">
+				<table>
+					<tr>
+						<td>Nome:</td>
+						<td><input type="text" th:field="*{nome}" /></td>
+						<td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></td>
+					</tr>		
+					<tr>
+						<td>Data e ora:</td>
+						<td><input type="date" th:field="*{dataEora}" /></td>
+						<td th:if="${#fields.hasErrors('dataEora')}" th:errors="*{dataEora}"></td>
+					</tr>
+					<tr>
+						<td><button type="submit">Invia</button></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		</section>
 	</div>
-	<form th:action="@{/attività}" method="POST" th:object="${attività}">
-		<table>
-			<tr>
-				<td>Nome:</td>
-				<td><input type="text" th:field="*{nome}" /></td>
-				<td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></td>
-			</tr>		
-			<tr>
-				<td>Data e ora:</td>
-				<td><input type="date" th:field="*{dataEora}" /></td>
-				<td th:if="${#fields.hasErrors('dataEora')}" th:errors="*{dataEora}"></td>
-			</tr>
-			<tr>
-				<td><button type="submit">Invia</button></td>
-			</tr>
-		</table>
-	</form>
+</div>
 </body>
 </html>

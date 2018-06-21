@@ -2,51 +2,57 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
-	<div>
-		<h4 class="title">Inserisci Allievo</h4>
-		<p th:text="${exists}"></p>
-	</div>
-	<form th:action="@{/allievo}" method="POST" th:object="${allievo}">
-		<table>
-			<tr>
-				<td>Nome:</td>
-				<td><input type="text" th:field="*{nome}" /></td>
-				<td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></td>
-			</tr>		
-			<tr>
-				<td>Cognome:</td>
-				<td><input type="text" th:field="*{cognome}" /></td>
-				<td th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"></td>
-			</tr>
-			<tr>
-				<td>Email:</td>
-				<td><input type="text" th:field="*{email}" /></td>
-				<td th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></td>
-			</tr>
-			<tr>
-			<tr>
-				<td>Telefono:</td>
-				<td><input type="text" th:field="*{telefono}" /></td>
-				<td th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}"></td>
-			</tr>
-			<tr>
-			<tr>
-				<td>Luogo di Nascita:</td>
-				<td><input type="text" th:field="*{luogoDiNascita}" /></td>
-				<td th:if="${#fields.hasErrors('luogoDiNascita')}" th:errors="*{luogoDiNascita}"></td>
-			</tr>
-			<tr>
-			<tr>
-				<td>Data di Nascita:</td>
-				<td><input type="text" th:field="*{dataDiNascita}" /></td>
-				<td th:if="${#fields.hasErrors('dataDiNascita')}" th:errors="*{dataDiNascita}"></td>
-			</tr>
-			<tr>
-				<td><button type="submit">Invia</button></td>
-			</tr>
-		</table>
-	</form>
+<div class="container">
+	<div id="main">
+			<div>
+				<h4 class="title">Inserisci Allievo</h4>
+				<p th:text="${exists}"></p>
+			</div>
+			<form th:action="@{/allievo}" method="POST" th:object="${allievo}">
+				<table>
+					<tr>
+						<td>Nome:</td>
+						<td><input type="text" th:field="*{nome}" /></td>
+						<td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></td>
+					</tr>		
+					<tr>
+						<td>Cognome:</td>
+						<td><input type="text" th:field="*{cognome}" /></td>
+						<td th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><input type="text" th:field="*{email}" /></td>
+						<td th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></td>
+					</tr>
+					<tr>
+					<tr>
+						<td>Telefono:</td>
+						<td><input type="text" th:field="*{telefono}" /></td>
+						<td th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}"></td>
+					</tr>
+					<tr>
+					<tr>
+						<td>Luogo di Nascita:</td>
+						<td><input type="text" th:field="*{luogoDiNascita}" /></td>
+						<td th:if="${#fields.hasErrors('luogoDiNascita')}" th:errors="*{luogoDiNascita}"></td>
+					</tr>
+					<tr>
+					<tr>
+						<td>Data di Nascita:</td>
+						<td><input type="text" th:field="*{dataDiNascita}" /></td>
+						<td th:if="${#fields.hasErrors('dataDiNascita')}" th:errors="*{dataDiNascita}"></td>
+					</tr>
+					<tr>
+						<p align="center"><td><button type="submit">Invia</button></td></p>
+					</tr>
+				</table>
+			</form>
+			</div>
+		</div>
 </body>
 </html>
