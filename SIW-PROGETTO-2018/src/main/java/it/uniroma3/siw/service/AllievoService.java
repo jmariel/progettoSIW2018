@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import it.uniroma3.siw.model.Allievo;
+import it.uniroma3.siw.model.Attività;
 import it.uniroma3.siw.repository.AllievoRepository;
 
 @Transactional
@@ -33,6 +34,14 @@ public class AllievoService {
 			return null;
 	}
 	
+	public List<Allievo> findByNomeAndCognomeAndDataDiNascitaAndLuogoDiNascita(Allievo allievo) {
+		List<Allievo> allievi = this.repository.findByNomeAndCognomeAndDataDiNascitaAndLuogoDiNascita(allievo.getNome(), allievo.getCognome(), allievo.getDataDiNascita(), allievo.getLuogoDiNascita());
+		if(allievi.size() > 0)
+			return allievi;
+		else
+			return null;
+	}
+	
 	public boolean alreadyExist(Allievo allievo) {
 		List<Allievo> allievi = this.repository.findByNomeAndCognomeAndDataDiNascitaAndLuogoDiNascita(allievo.getNome(), allievo.getCognome(), allievo.getDataDiNascita(), allievo.getLuogoDiNascita());
 		if(allievi.size() > 0)
@@ -40,5 +49,4 @@ public class AllievoService {
 		else
 			return false;
 	}
-
 }

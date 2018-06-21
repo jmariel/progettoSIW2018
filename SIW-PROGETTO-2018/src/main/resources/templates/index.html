@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<!-- <!DOCTYPE html>
-<html>
-=======
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
-<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
->>>>>>> branch 'master' of https://github.com/jmariel/progettoSIW2018.git
-<head>
-<meta charset="UTF-8">
-<title>Homepage</title>
-</head>
-<body>
-	<p th:text="Benvenuti!" />
-	<p th:href="@{/addAllievo}"> Inserisci nuovo allievo </p>
-	<p th:href="@{/allievi}"> Elenco allievo </p>
-	<p th:href="@{/addCentro}"> Aggiungi nuovo centro </p>
-	<p th:href="@{/centri}"> Elenco Centri di Formazione </p>
-	<p th:href="@{/addAttività}"> Inserisci nuova attività </p>
-	<p th:href="@{/attività}"> Elenco Attività</p>
-</body>
-</html>
--->
-
 <!DOCTYPE HTML>
 <!--
 	Strata by HTML5 UP
@@ -77,14 +54,8 @@
 						document.write(""+giorno+" "+date+" "+mese+" "+year+" "+ora+":"+minuti+":"+secondi);
 					</script>
 						<br><br><br><br>
-					<h1><strong>scegli una delle seguenti operazioni:</strong></h1><br />
-					<p align="right">
-						<a th:href="@{/addAllievo}"> Inserisci nuovo allievo </a><br>
-						<a th:href="@{/searchAllievo}"> Cerca allievo </a><br>
-						<a th:href="@{/addAttività}"> Inserisci nuova attività </a><br>
 						<a th:href="@{/places}"> Elenco Centri di Formazione </a><br>
-						<a th:href="@{/activities}"> Elenco Attività</a><br>
-					</p>
+						<a th:href="@{/activities}"> Elenco Attività</a>
 				</div>
 			</header>
 
@@ -170,6 +141,10 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
+					<p align="center">
+						<strong>acceso per i Responsabili del Centro:</strong><br />
+						<a th:href="@{/login}"> Accedi </a><br>
+					</p>
 					<ul class="icons">
 						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>

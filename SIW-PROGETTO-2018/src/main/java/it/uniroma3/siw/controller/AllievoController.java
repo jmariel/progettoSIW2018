@@ -1,5 +1,7 @@
 package it.uniroma3.siw.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,15 @@ public class AllievoController {
 	public String addAllievo(Model model) {
 		model.addAttribute("allievo", new Allievo());
 		return "allievoForm";
+	}
+	
+	@RequestMapping("/searchAllievo")
+	public String cercaAllievo(@ModelAttribute("allievo") Model model, Allievo allievo) {
+		List<Allievo> allievi = service.findByNomeAndCognomeAndDataDiNascitaAndLuogoDiNascita(allievo);
+		if (allievi.size() == 1)
+			return "mostraAllievo";
+		else
+			return "Sono presenti più allievo con queste informazioni";
 	}
 	
 	@RequestMapping(value = "/allievo/{id}", method = RequestMethod.GET)
