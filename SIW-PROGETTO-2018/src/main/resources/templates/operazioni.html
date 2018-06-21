@@ -6,13 +6,13 @@
     </head>
     <body>
         <h1 th:inline="text">Benvenuto [[${#httpServletRequest.remoteUser}]]!</h1>
-       <h1><strong>scegli una delle seguenti operazioni:</strong></h1><br />
-			<p align="right">
-				<a th:href="@{/addAllievo}"> Inserisci nuovo allievo </a><br>
-				<a th:href="@{/searchAllievo}"> Cerca allievo </a><br>
-				<a th:href="@{/addAttività}"> Inserisci nuova attività </a><br>
-				<a th:href="@{/places}"> Elenco Centri di Formazione </a><br>
-				<a th:href="@{/activities}"> Elenco Attività</a><br>
-			</p>
+        <p align="right">
+       		<h1><strong>scegli una delle seguenti operazioni:</strong></h1><br />
+			<a th:href="@{/addAllievo}"> Inserisci nuovo allievo </a><br>
+			<a th:href="@{/searchAllievo}"> Cerca allievo </a><br>
+			<a th:href="@{/addAttività}"> Inserisci nuova attività </a><br>
+			<a th:href="@{/centroList}"> Elenco Centri di Formazione </a><br>				
+			<a th:href="@{/attivitàList}"> Elenco Attività</a><br>
+		</p>
     </body>
 </html>
